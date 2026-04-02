@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>React API モジュール | 研修トップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="grid">
+      <div class="hero-content">
+        <div class="eyebrow">Module 04</div>
+        <h1>ReactでAPI連携を極める</h1>
+        <div class="cta-row">
+          <a class="btn-primary" href="#tasks">課題に進む →</a>
+          <a class="btn-secondary" href="#learn">学ぶことを確認</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat"><strong>ゴール</strong><span>API連携したReactアプリを実装し、ローディング/エラー/空表示を正しく出し分ける</span></div>
+        <div class="stat"><strong>必須スキル</strong><span>fetch/axios, hooks, 状態管理, エラーハンドリング, テスト</span></div>
+        <div class="stat"><strong>納品物</strong><span>コード + 動作キャプチャ</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="learn">
+    <div class="section-head">
+      <h2>✏️ 学ぶこと</h2>
+      <span class="pill">データ連携の基礎</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>データ取得</h3>
+        <ul class="list">
+          <li>fetch / axios の使い分け</li>
+          <li>async/await と try/catch</li>
+          <li>APIレスポンスの型とバリデーション</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>UIステート設計</h3>
+        <ul class="list">
+          <li>loading / success / empty / error の状態定義</li>
+          <li>スケルトンやプレースホルダー</li>
+          <li>再試行ボタンの設計</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>状態管理</h3>
+        <ul class="list">
+          <li>ローカルstateとグローバルstateの使い分け</li>
+          <li>カスタムフックでのロジック分離</li>
+          <li>メモ化と依存配列</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>品質/テスト</h3>
+        <ul class="list">
+          <li>エラーログとユーザー向けメッセージを分ける</li>
+          <li>単体テスト（React Testing Library）</li>
+          <li>APIモックでの挙動確認</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="tasks">
+    <div class="section-head">
+      <h2>📝 課題：API連携カード一覧</h2>
+      <span class="pill">React + fetch</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>要件</h3>
+        <ul class="list">
+          <li>モックAPIからプロフィール配列を取得</li>
+          <li>読み込み中はローディングUIを表示</li>
+          <li>失敗時はエラーバナーと再試行ボタン</li>
+          <li>フィルタ/ソートを実装（任意: ページネーション）</li>
+        </ul>
+        <div class="tag-row">
+          <span class="badge">fetch</span>
+          <span class="badge">useEffect</span>
+          <span class="badge">Custom Hook</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>必要ファイル</h3>
+        <div class="resources">
+          <a class="resource-link" href="./react-api.zip">React API (受講者用)</a>
+          <a class="resource-link" href="./react-api-sample.zip">回答サンプル</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="requirements">
+    <div class="section-head">
+      <h2>🎯 完成イメージ / 制約</h2>
+      <span class="pill">守るポイント</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>UI</h3>
+        <ul class="list">
+          <li>PC 3列 / SP 1列</li>
+          <li>カード間に余白・影</li>
+          <li>ボタンのhover/activeを用意</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>実装</h3>
+        <ul class="list">
+          <li>データ取得ロジックはカスタムフックに分離</li>
+          <li>依存配列を正しく設定し無限リクエストを防止</li>
+          <li>例外処理を網羅しユーザーに通知</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>品質</h3>
+        <ul class="list">
+          <li>キー付与・aria-labelでA11y確保</li>
+          <li>ローディング/エラー/空をUIで明示</li>
+          <li>テストまたは手動手順で確認</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="section-head">
+      <h2>✅ セルフチェック</h2>
+      <span class="pill">提出前に確認</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>機能</h3>
+        <ul class="list">
+          <li>成功時にカードが表示される</li>
+          <li>ローディングが出て消える</li>
+          <li>失敗時に再試行ボタンが動く</li>
+          <li>フィルタ/ソートが正しく反映</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>コード</h3>
+        <ul class="list">
+          <li>カスタムフックで副作用を分離</li>
+          <li>魔法の数字を定数化</li>
+          <li>不要なconsole.logがない</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>理解</h3>
+        <ul class="list">
+          <li>依存配列に何を入れるか説明できる</li>
+          <li>エラー時のUIとログ出力の役割を説明できる</li>
+          <li>fetchとaxiosの違いを説明できる</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <h2>🆘 詰まったら</h2>
+      <span class="pill">質問テンプレ付き</span>
+    </div>
+    <div class="layout-split">
+      <div class="support-box">
+        <h3>デバッグ手順</h3>
+        <ol class="list">
+          <li>Network/Consoleでリクエストとエラーを確認</li>
+          <li>レスポンスの中身と型をログ出力</li>
+          <li>依存配列やステート変更箇所を最小化して再現</li>
+          <li>公式ドキュメント/React.dev/MDNを参照</li>
+        </ol>
+      </div>
+      <div class="support-box">
+        <h3>質問するときに書くこと</h3>
+        <ul class="list">
+          <li>やりたいこと</li>
+          <li>現在の状況</li>
+          <li>エラー内容</li>
+          <li>試したこと</li>
+          <li>わからない点</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="section-head">
+      <h2>📚 参考</h2>
+      <span class="pill">Docs & Tools</span>
+    </div>
+    <div class="resources">
+      <a class="resource-link" href="https://react.dev/learn">React 公式: Learn</a>
+      <a class="resource-link" href="https://developer.mozilla.org/ja/docs/Web/API/Fetch_API">MDN: Fetch API</a>
+    </div>
+  </section>
+
+  <footer>
+    React API モジュール — 伴走型ブートキャンプ
+  </footer>
+</body>
+</html>
