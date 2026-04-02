@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML / CSS モジュール | 研修トップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="grid">
+      <div class="hero-content">
+        <div class="eyebrow">Module 01</div>
+        <h1>HTML / CSS 基礎</h1>
+        <div class="cta-row">
+          <a class="btn-primary" href="#tasks">課題に進む →</a>
+          <a class="btn-secondary" href="#learn">学ぶことを確認</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat"><strong>ゴール</strong><span>HTML/CSSのみでPC3列・SP1列のカードUIを実装</span></div>
+        <div class="stat"><strong>必須スキル</strong><span>セマンティックタグ / Flexbox / 余白・タイポ設計 / メディアクエリ</span></div>
+        <div class="stat"><strong>納品物</strong><span>コード + スクリーンショット</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="learn">
+    <div class="section-head">
+      <h2>✏️ 学ぶこと</h2>
+      <span class="pill">基礎を面で押さえる</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>HTML基礎</h3>
+        <ul class="list">
+          <li>文書構造（html / head / body）</li>
+          <li>セマンティックタグ：header / main / section / article / footer</li>
+          <li>基本要素：h1〜h6, p, ul/li, a, img, button</li>
+          <li>フォーム：input / label / textarea / button</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>CSS基礎</h3>
+        <ul class="list">
+          <li>セレクタとプロパティ</li>
+          <li>display: block / inline / flex</li>
+          <li>Flexboxで整列・中央寄せ</li>
+          <li>余白（margin / padding）、サイズ（width / height）</li>
+          <li>色・背景・枠線・フォントサイズ</li>
+          <li>position: relative / absolute</li>
+          <li>:hover など疑似クラス</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>レスポンシブ</h3>
+        <ul class="list">
+          <li>media queryの書き方</li>
+          <li>画面幅に応じた列数切替</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>開発スキル</h3>
+        <ul class="list">
+          <li>Chrome DevToolsで要素/スタイル確認</li>
+          <li>崩れの切り分け（レイアウト・余白・サイズ）</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="tasks">
+    <div class="section-head">
+      <h2>📝 課題：プロフィールカード一覧</h2>
+      <span class="pill">HTML / CSSのみで実装</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>完成イメージ</h3>
+        <div class="gallery">
+          <a href="./screenshot.png"><img src="./screenshot.png" alt="完成イメージ" /></a>
+        </div>
+        <div class="tag-row">
+          <span class="badge">PC: 3列</span>
+          <span class="badge">SP: 1列</span>
+          <span class="badge">Flexbox</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>必要ファイル</h3>
+        <div class="resources">
+          <a class="resource-link" href="./html-css-learner.zip">HTML, CSS基礎 (受講者用)</a>
+          <a class="resource-link" href="./html-css.zip">回答サンプル</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="requirements">
+    <div class="section-head">
+      <h2>🎯 デザイン要件</h2>
+      <span class="pill">必ず満たす</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>レイアウト</h3>
+        <ul class="list">
+          <li>カードは横並び（PC 3列）</li>
+          <li>カード間に十分な余白をとる</li>
+          <li>SP表示時は1列に切り替え</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>ビジュアル</h3>
+        <ul class="list">
+          <li>カードに枠線または影</li>
+          <li>ボタンにhover時のスタイル変化</li>
+          <li>テキストの可読性と余白バランスを確保</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>制約</h3>
+        <ul class="list">
+          <li>HTML / CSSのみ（JavaScript禁止）</li>
+          <li>Flexboxでレイアウト構築</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="section-head">
+      <h2>✅ 完了条件 / セルフチェック</h2>
+      <span class="pill">提出前に確認</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>機能・表示</h3>
+        <ul class="list">
+          <li>指定UIをHTML/CSSのみで再現</li>
+          <li>PC表示で崩れなし</li>
+          <li>SP表示で1列レイアウト</li>
+          <li>カードが均等配置</li>
+          <li>ボタンのhover効果</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>コード品質</h3>
+        <ul class="list">
+          <li>セマンティックなHTML構造</li>
+          <li>不要なdivネストがない</li>
+          <li>CSSが過度に冗長でない</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>理解して説明できること</h3>
+        <ul class="list">
+          <li>Flexboxを選んだ理由</li>
+          <li>HTML構造の意図</li>
+          <li>余白やサイズ設計の考え方</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <h2>🆘 詰まったら</h2>
+      <span class="pill">質問テンプレ付き</span>
+    </div>
+    <div class="layout-split">
+      <div class="support-box">
+        <h3>解決の手順</h3>
+        <ol class="list">
+          <li>エラー内容を確認</li>
+          <li>該当箇所を特定</li>
+          <li>公式ドキュメントを確認</li>
+          <li>サンプルと比較</li>
+          <li>それでも無理なら質問</li>
+        </ol>
+      </div>
+      <div class="support-box">
+        <h3>質問するときに書くこと</h3>
+        <ul class="list">
+          <li>やりたいこと</li>
+          <li>現在の状況</li>
+          <li>エラー内容</li>
+          <li>試したこと</li>
+          <li>わからない点</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="section-head">
+      <h2>📚 参考サイト</h2>
+      <span class="pill">動画 & 記事</span>
+    </div>
+    <div class="resources">
+      <a class="resource-link" href="https://www.youtube.com/watch?v=IR_srJ2zL3o&list=PLLFOC5fk1ILkBg1P8kHRZjGpEcVR26saV">YouTube 再生リスト</a>
+      <a class="resource-link" href="https://www.udemy.com/share/101WGM3@PszSTwlZNkGyKTxu-h7S0SQu_JgATpEP4tbzWmHYHJ3Pu79vszzlcR1zGqL11oXTJQ==/">Udemy: Web開発入門完全攻略コース</a>
+      <a class="resource-link" href="https://yoshikawaweb.com/element/">HTML5 入れ子チートシート</a>
+    </div>
+  </section>
+
+  <footer>
+    HTML / CSS モジュール — 伴走型ブートキャンプ
+  </footer>
+</body>
+</html>
