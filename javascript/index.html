@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JavaScript モジュール | 研修トップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="grid">
+      <div class="hero-content">
+        <div class="eyebrow">Module 02</div>
+        <h1>JavaScript基礎</h1>
+        <div class="cta-row">
+          <a class="btn-primary" href="#tasks">課題に進む →</a>
+          <a class="btn-secondary" href="#learn">学ぶことを確認</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat"><strong>ゴール</strong><span>カードを描画・更新できるシングルページをJSのみで実装</span></div>
+        <div class="stat"><strong>必須スキル</strong><span>DOM / イベント  / 配列操作</span></div>
+        <div class="stat"><strong>納品物</strong><span>コード + 動作キャプチャ</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="learn">
+    <div class="section-head">
+      <h2>✏️ 学ぶこと</h2>
+      <span class="pill">動的UIの基礎</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>言語の基礎</h3>
+        <ul class="list">
+          <li>変数・スコープ・const/let</li>
+          <li>関数宣言 / アロー関数</li>
+          <li>配列・オブジェクト操作 (map/filter/reduce)</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>DOM & イベント</h3>
+        <ul class="list">
+          <li>要素の取得と生成 (querySelector / createElement)</li>
+          <li>クラス操作・属性操作</li>
+          <li>イベント委譲とフォーム入力処理</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>開発スキル</h3>
+        <ul class="list">
+          <li>DevToolsでネットワーク/コンソール確認</li>
+          <li>デバッグ用ログとbreakpoint</li>
+          <li>モジュール化の基本 (ファイル分割)</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="tasks">
+    <div class="section-head">
+      <h2>📝 課題：プロフィールカード一覧</h2>
+      <span class="pill">JavaScriptのみで実装</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>要件</h3>
+        <ul class="list">
+          <li>カードを描画</li>
+          <li>条件によってカードをフィルタリング</li>
+        </ul>
+        <div class="tag-row">
+          <span class="badge">DOM操作</span>
+          <span class="badge">イベント</span>
+          <span class="badge">配列操作</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>必要ファイル</h3>
+        <div class="resources">
+          <a class="resource-link" href="./JavaScript基礎(受講者用).zip">JavaScript基礎 (受講者用)</a>
+          <a class="resource-link" href="./JavaScript基礎.zip">回答サンプル</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="requirements">
+    <div class="section-head">
+      <h2>🎯 完成イメージ / 制約</h2>
+      <span class="pill">守るべきポイント</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>UI</h3>
+        <ul class="list">
+          <li>カードはPC 3列 / SP 1列</li>
+          <li>余白と影でカードを区切る</li>
+          <li>ボタンのhover/activeで状態を示す</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>実装</h3>
+        <ul class="list">
+          <li>フレームワーク不使用、バニラJSのみ</li>
+          <li>イベント委譲を1箇所で行う</li>
+          <li>配列操作を使用</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>品質</h3>
+        <ul class="list">
+          <li>定数/関数名は意図が分かる命名</li>
+          <li>魔法の数字は定数化</li>
+          <li>例外ケース（空配列・失敗時）をハンドリング</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="section-head">
+      <h2>✅ セルフチェック</h2>
+      <span class="pill">提出前に確認</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>機能</h3>
+        <ul class="list">
+          <li>データ取得成功でカードが描画される</li>
+          <li>条件によってカードをフィルタリング</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>コード</h3>
+        <ul class="list">
+          <li>関数は単一責務になっている</li>
+          <li>重複処理はヘルパー関数化</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>理解</h3>
+        <ul class="list">
+          <li>イベントバブリングと委譲の利点</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <h2>🆘 詰まったら</h2>
+      <span class="pill">質問テンプレ付き</span>
+    </div>
+    <div class="layout-split">
+      <div class="support-box">
+        <h3>デバッグ手順</h3>
+        <ol class="list">
+          <li>Console/Networkタブでエラーを確認</li>
+          <li>エラー行を特定して入力値をログ出力</li>
+          <li>最小再現を作って原因を切り分け</li>
+          <li>公式ドキュメント/MDNを参照</li>
+        </ol>
+      </div>
+      <div class="support-box">
+        <h3>質問するときに書くこと</h3>
+        <ul class="list">
+          <li>やりたいこと</li>
+          <li>現在の状況</li>
+          <li>エラー内容</li>
+          <li>試したこと</li>
+          <li>わからない点</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="section-head">
+      <h2>📚 参考</h2>
+      <span class="pill">MDN & 学習サイト</span>
+    </div>
+    <div class="resources">
+      <a class="resource-link" href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide">MDN: JavaScript ガイド</a>
+      <a class="resource-link" href="https://javascript.info/">The Modern JavaScript Tutorial</a>
+    </div>
+  </section>
+
+  <footer>
+    JavaScript モジュール — 伴走型ブートキャンプ
+  </footer>
+</body>
+</html>

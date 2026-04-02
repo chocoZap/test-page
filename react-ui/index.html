@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>React UI モジュール | 研修トップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="grid">
+      <div class="hero-content">
+        <div class="eyebrow">Module 03</div>
+        <h1>ReactでUIを設計する</h1>
+        <div class="cta-row">
+          <a class="btn-primary" href="#tasks">課題に進む →</a>
+          <a class="btn-secondary" href="#learn">学ぶことを確認</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="stat"><strong>ゴール</strong><span>コンポーネント分割と状態管理を行い、UIをReactで組み上げる</span></div>
+        <div class="stat"><strong>必須スキル</strong><span>JSX / props / state / hooks / コンポーネント設計</span></div>
+        <div class="stat"><strong>納品物</strong><span>コード + 動作キャプチャ</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section id="learn">
+    <div class="section-head">
+      <h2>✏️ 学ぶこと</h2>
+      <span class="pill">React UIの基礎</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <h3>基礎</h3>
+        <ul class="list">
+          <li>JSXとコンポーネント分割</li>
+          <li>props / state / コンポジション</li>
+          <li>イベントとフォームハンドリング</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Hooks</h3>
+        <ul class="list">
+          <li>useState / useEffect</li>
+          <li>カスタムフックの切り出し</li>
+          <li>依存配列と副作用の整理</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>設計・品質</h3>
+        <ul class="list">
+          <li>コンポーネント設計指針（責務分割）</li>
+          <li>UIステートの種別</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="tasks">
+    <div class="section-head">
+      <h2>📝 課題：コンポーネント化されたカード一覧</h2>
+      <span class="pill">React + Hooks</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>要件</h3>
+        <ul class="list">
+          <li>プロフィールカードをコンポーネント化</li>
+          <li>propsでデータを受け渡し</li>
+          <li>フィルタ/ソートをステートで管理</li>
+          <li>空データ時のプレースホルダー表示</li>
+        </ul>
+        <div class="tag-row">
+          <span class="badge">JSX</span>
+          <span class="badge">useState</span>
+          <span class="badge">コンポーネント設計</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>必要ファイル</h3>
+        <div class="resources">
+          <a class="resource-link" href="./React基礎(UI).zip">React UI (受講者用)</a>
+          <a class="resource-link" href="./react-sample-ui.zip">回答サンプル</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="requirements">
+    <div class="section-head">
+      <h2>🎯 完成イメージ / 制約</h2>
+      <span class="pill">守るポイント</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>UI</h3>
+        <ul class="list">
+          <li>PC 3列 / SP 1列</li>
+          <li>カード間に余白・影</li>
+          <li>ボタンのhover/activeを用意</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>実装</h3>
+        <ul class="list">
+          <li>関心ごと別にコンポーネント分割</li>
+          <li>親→子はprops、子→親はイベントで通知</li>
+          <li>ステートの初期値・型を明示</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>品質</h3>
+        <ul class="list">
+          <li>不要な再レンダーを避ける（メモ化は任意）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="section-head">
+      <h2>✅ セルフチェック</h2>
+      <span class="pill">提出前に確認</span>
+    </div>
+    <div class="layout-split">
+      <div class="card">
+        <h3>機能</h3>
+        <ul class="list">
+          <li>データが正しくカードに表示される</li>
+          <li>フィルタ/ソートが反映される</li>
+          <li>空・ローディング・エラーを出し分け</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>コード</h3>
+        <ul class="list">
+          <li>コンポーネントが単一責務</li>
+          <li>propsの型・初期値が明確</li>
+          <li>不要なconsole.logがない</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>理解</h3>
+        <ul class="list">
+          <li>stateとpropsの違い</li>
+          <li>再レンダーが起きるタイミング</li>
+          <li>キーが必要な理由</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="section-head">
+      <h2>🆘 詰まったら</h2>
+      <span class="pill">質問テンプレ付き</span>
+    </div>
+    <div class="layout-split">
+      <div class="support-box">
+        <h3>デバッグ手順</h3>
+        <ol class="list">
+          <li>Consoleに出たエラーを読む</li>
+          <li>最小の再現ケースを作る</li>
+          <li>依存配列やpropsが正しいか確認</li>
+          <li>公式ドキュメント/React.devを参照</li>
+        </ol>
+      </div>
+      <div class="support-box">
+        <h3>質問するときに書くこと</h3>
+        <ul class="list">
+          <li>やりたいこと</li>
+          <li>現在の状況</li>
+          <li>エラー内容</li>
+          <li>試したこと</li>
+          <li>わからない点</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="section-head">
+      <h2>📚 参考</h2>
+      <span class="pill">Docs & Tools</span>
+    </div>
+    <div class="resources">
+      <a class="resource-link" href="https://react.dev/learn">React 公式: Learn</a>
+      <a class="resource-link" href="https://beta.reactjs.org/learn/thinking-in-react">Thinking in React</a>
+      <a class="resource-link" href="https://storybook.js.org/docs">Storybook Docs</a>
+    </div>
+  </section>
+
+  <footer>
+    React UI モジュール — 伴走型ブートキャンプ
+  </footer>
+</body>
+</html>
